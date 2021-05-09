@@ -1,0 +1,1027 @@
+@use "common" as *;
+
+.dash-pricing-area {
+  background-color: #F6F9FC;
+  padding: 43px;
+  @include mq(xxl) {
+    padding: 20px;
+  }
+  @include mq(xl) {
+    padding: 15px;
+  }
+  @include mq(lg) {
+    padding: 15px;
+  }
+  @include mq(xs) {
+    padding: 15px;
+  }
+}
+
+.section-title-desc {
+  p {
+    font-size: 20px;
+    color: #07132C;
+    line-height: 26px;
+    font-family: $AirbnbMedium;
+    @include mq(xl){
+      font-size: 18px;
+    }
+  }
+}
+
+.subscription-period-wrapper.dash-sub-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+.subscription-period-wrapper {
+  & .subscription-price-item {
+    padding: 22px 30px;
+    padding-bottom: 15px;
+
+    & .price-offer {
+      font-size: 24px;
+      line-height: 30px;
+      color: #07132C;
+      font-family: $AirbnbMedium;
+      margin-bottom: 5px;
+    }
+
+    & .subscription-time-period {
+      font-size: 16px;
+      line-height: 19px;
+      color: #6A7280;
+      font-family: $PSRegular;
+      margin-bottom: 12px;
+    }
+
+    & .price-tag {
+      h3 {
+        font-size: 36px;
+        line-height: 30px;
+        font-family: $PSBold;
+        color: #07132C;
+        margin-bottom: 14px;
+        @include mq(xl){
+          font-size: 30px;
+        }
+
+        span {
+          font-size: 16px;
+          line-height: 30px;
+          font-family: $PSRegular;
+          font-weight: 400;
+          color: #9CA1AB;
+        }
+      }
+    }
+
+    & .price-text {
+      p {
+        color: #6A7280;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 0;
+        font-family: $PSRegular;
+      }
+    }
+  }
+
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+.subscription-price-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.price-offer {
+  width: 70px;
+}
+
+.subscription-price-inner-content {
+  flex: 1 0 0%;
+}
+
+
+// for checked
+.subscription-period-single-item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 28px;
+    top: 60px;
+    content: "";
+    border: 1px solid #9CA1AB;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+  }
+
+  &::before {
+    position: absolute;
+    right: 32px;
+    top: 60px;
+    z-index: 3;
+    width: 20px;
+    display: none;
+    height: 20px;
+    content: "\f00c";
+    font-family: 'Font awesome 5 pro';
+  }
+}
+
+.subscription-price-item {
+  overflow: visible;
+  background-color: transparent;
+}
+
+.subscription-period-wrapper input:checked + .subscription-period-single-item::before {
+  color: #fff;
+  display: block;
+}
+
+.subscription-period-wrapper input:checked + .subscription-period-single-item::after {
+  background-color: #2DCE89;
+  border-color: transparent;
+}
+
+.subscription-period-wrapper input:checked + label {
+  background-color: #fff;
+}
+
+.subscription-period-checkbox[type="radio"] {
+  display: none;
+}
+
+.subscription-period-single-item {
+  display: block;
+}
+
+
+// account-settings-area-css
+.account-settings-text {
+  span {
+    font-size: 18px;
+    color: #6A7280;
+    line-height: 23px;
+    font-family: $AirbnbRegular;
+  }
+}
+
+.account-settings-thumb {
+  position: relative;
+
+  .account-upload-thumb {
+    label {
+      position: absolute;
+      bottom: 8px;
+      left: 92px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      line-height: 35px;
+      background-color: #6A7280;
+      text-align: center;
+    }
+  }
+}
+
+.account-upload-thumb input[type="file"] {
+  display: none;
+}
+
+// account-info-form-css
+.account-settings-wrapper {
+  margin-bottom: 40px;
+}
+
+.account-info-title {
+  font-size: 18px;
+  line-height: 23px;
+  color: #6A7280;
+  font-family: $AirbnbRegular;
+}
+
+.account-form-info {
+  form {
+    label {
+      font-size: 14px;
+      color: #07132C;
+      line-height: 18px;
+      font-family: $AirbnbMedium;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.account-form {
+  input {
+    width: 100%;
+    background-color: #F6F9FC;
+    border: 0;
+    height: 50px;
+    padding: 0 45px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+  }
+}
+
+.account-form input {
+  @include placeholder {
+    font-size: 16px;
+    color: #07132C;
+    font-family: $AirbnbRegular;
+  }
+}
+
+.view-password {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  color: #CDD0D5;
+}
+
+.account-info-change-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & a {
+    color: #696CE8;
+    padding: 0 45px;
+    border: 1px solid $theme-color;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+    border-radius: 10px;
+    @include mq(xl){
+      padding: 0 16px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      background: $theme-color;
+      color: #fff;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq(xxl) {
+      margin-bottom: 20px;
+    }
+    @include mq(lg) {
+      padding: 0 35px;
+    }
+    @include mq(md) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    @include mq(xs) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.account-form {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 15px;
+    height: 22px;
+    width: 22px;
+    z-index: 9;
+    text-align: center;
+    transform: translateY(13px);
+    background-position: center center;
+  }
+
+  &.u-name {
+    &::after {
+      content: "";
+      background-image: url(../img/icon/profile.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.u-email {
+    &::after {
+      content: "";
+      background-image: url(../img/icon/message.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.u-password {
+    &::after {
+      content: "";
+      background-image: url(../img/icon/lock.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  & .input-check-circle {
+    position: absolute;
+    right: 16px;
+    top: 7px;
+  }
+}
+
+
+//   VPN Active Devices-area-css
+.single-vpn-device {
+  background-color: #F6F9FC;
+  padding: 30px 35px;
+  border-radius: 15px;
+  padding-bottom: 25px;
+  @include mq(xl){
+    padding: 10px 20px;
+  }
+}
+
+.single-vpn-text span {
+  font-size: 18px;
+  line-height: 23px;
+  color: #07132C;
+  font-family: $AirbnbMedium;
+  @include mq(xl){
+    font-size: 15px;
+  }
+}
+
+.single-vpn-device {
+  min-height: 165px;
+  @include mq(xl) {
+    margin-bottom: 20px;
+    min-height: 150px;
+    padding-top: 25px;
+  }
+  @include mq(lg) {
+    margin-bottom: 20px;
+  }
+  @include mq(md) {
+    margin-bottom: 20px;
+  }
+  @include mq(sm) {
+    margin-bottom: 20px;
+  }
+  @include mq(xs) {
+    margin-bottom: 20px;
+  }
+}
+
+
+.account-tabs {
+  .nav-tabs {
+    border: 0;
+    margin: 0;
+    padding: 10px 0 0;
+
+    li {
+      margin-bottom: 30px;
+      @include mq(xs){
+        width: 100%;
+      }
+      .nav-link {
+        background: transparent;
+        margin-right: 20px;
+        border: 1px solid #E6E7EA;
+        font-size: 16px;
+        color: #E6E7EA;
+        padding: 0 46px;
+        height: 48px;
+        @include mq(lg) {
+          padding: 0 30px;
+        }
+        @include mq(md) {
+          padding: 0 12px;
+          margin-right: 0;
+        }
+        @include mq(sm) {
+          margin-right: 15px;
+          padding: 0 10px;
+        }
+        @include mq(xs) {
+          margin-right: 0;
+          width: 100%;
+        }
+
+        &.active {
+          background-color: $theme-color;
+          color: #ffff;
+          position: relative;
+
+          &::before {
+            content: "";
+            border-left: 13px solid transparent;
+            border-right: 14px solid transparent;
+            border-top: 15px solid #696CE8;
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+          }
+        }
+
+        &:hover {
+          border-color: #E6E7EA;
+        }
+      }
+
+      &:last-child {
+        & button {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.account-tab-btn button {
+  border: 0;
+}
+
+.account-tab-btn.text-end {
+  display: flex;
+  justify-content: end;
+}
+
+.cancel-btn {
+  font-size: 16px;
+  height: 50px;
+  padding: 0 32px;
+  margin-left: 15px;
+  color: #fff;
+  font-family: $PSRegular;
+  text-transform: capitalize;
+  background: #CDD0D5;
+  border-radius: 5px;
+  @include transition(.3s);
+}
+
+.account-tab-btn button.cancel-btn:hover {
+  background: $theme-color;
+}
+
+// My-Subscription-page-css
+.subscription-wrapper {
+  & .subscription-text {
+    & p {
+      font-size: 18px;
+      color: #6A7280;
+      line-height: 30px;
+      font-family: $PSRegular;
+    }
+
+  }
+}
+
+.subscription-pricing-wrapper {
+  background-color: #F6F9FC;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.sub-priceing-plan {
+  & span {
+    font-size: 16px;
+    color: #07132C;
+    text-transform: capitalize;
+    font-family: $AirbnbMedium;
+
+    &.active-plan {
+      background: #07132C;
+      color: #fff;
+      padding: 10px 15px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.sub-pricing-body {
+  & ul {
+    padding: 0;
+
+    & li {
+      font-size: 16px;
+      color: #6A7280;
+      line-height: 30px;
+      list-style-type: none;
+      font-family: $PSRegular;
+
+      & span {
+        color: #07132C;
+        font-family: $PSBold;
+      }
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    color: #6A7280;
+    line-height: 30px;
+    list-style-type: none;
+    font-family: $PSRegular;
+  }
+}
+
+.subscription-price-tag-inner {
+  & h3 {
+    font-size: 36px;
+    line-height: 30px;
+    color: #07132C;
+    font-family: $PSBold;
+
+    & span {
+      color: #9CA1AB;
+      font-size: 16px;
+      font-family: $PSRegular;
+    }
+  }
+}
+
+.subscription-pricing-btn {
+  & button {
+    border: 0;
+    margin-right: 15px;
+    @include transition(.3s);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.cancel-sub {
+      height: 50px;
+      font-size: 16px;
+      background: #CDD0D5;
+      color: #fff;
+      text-transform: capitalize;
+      border-radius: 5px;
+      margin-right: 15px;
+      padding: 0 25px;
+      @include mq(xs) {
+        display: block;
+      }
+    }
+
+    &:hover {
+      &.cancel-sub {
+        background: $theme-color;
+      }
+    }
+  }
+}
+
+.subscription-pricing-btn {
+  display: flex;
+  justify-content: end;
+  @include mq(xs){
+    display: block;
+  }
+  button{
+    @include mq(xs){
+      margin-right: 0 !important;
+      margin-bottom: 20px;
+      height: auto;
+      padding: 15px 30px;
+      line-height: 1;
+    }
+    &.cancel-sub{
+      @include mq(xs){
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+
+// my-subscription-invoice-area-css
+.subscription-invoices-wrapper {
+  background: #F6F9FC;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.upload-file-thumb {
+  float: left;
+  margin-right: 20px;
+}
+
+.upload-file-name p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #424D61;
+  transform: translateY(7px);
+}
+
+.invoice-name {
+  & p {
+    font-size: 16px;
+    line-height: 30px;
+    transform: translateY(6px);
+    color: #9CA1AB;
+
+    & span {
+      color: #424D61;
+    }
+  }
+}
+
+.section-medium-title {
+  & h4 {
+    font-size: 22px;
+    color: #07132C;
+    line-height: 29px;
+    font-family: $AirbnbMedium;
+
+    & span {
+      color: #6A7280;
+      font-family: $AirbnbRegular;
+    }
+  }
+
+}
+
+
+.payment-method-wrapper {
+  background: #F6F9FC;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.payment-method-content {
+  display: flex;
+  justify-content: space-between;
+  @include mq(xs){
+    display: block;
+  }
+}
+
+.payment-method-btn {
+  height: 50px;
+
+  & button {
+    border: 0;
+  }
+}
+
+
+.payment-method-inner-info {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(xs){
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+}
+
+.payment-method-thumb {
+  margin-right: 30px;
+}
+
+.payment-date {
+  & p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #6A7280;
+    font-family: $PSRegular;
+
+    & span {
+      margin-left: 50px;
+    }
+  }
+}
+
+.payment-card-number {
+  & span {
+    font-size: 16px;
+    color: #6A7280;
+    line-height: 19px;
+    font-family: $PSRegular;
+  }
+}
+
+
+
+#myAccountTab {
+  justify-content: space-between;
+}
+#myAccountTab li {
+	@include mq(xs) {
+    flex: 0 0 100%;
+  }
+}
+.account-tabs .nav-tabs li .nav-link {
+  @include mq(xs) {
+    font-size: 12px;
+  }
+}
+
+.cookies-wrapper {
+  position: fixed;
+  top: -200px;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
+  @include transition(.3s);
+  padding: 0 350px;
+  @include mq(lg){
+    padding: 0 250px;
+  }
+  @include mq(md){
+    padding: 0 150px;
+  }
+  @include mq(sm){
+    padding: 0 150px;
+  }
+  @include mq(xs){
+    padding: 0;
+  }
+  & > .coockies-popup {
+    background-color: #fff;
+  }
+  &:is(.popup-shown) {
+    top: 0;
+  }
+}
+.coockies-popup p {
+	display: inline-block;
+	font-size: 22px;
+	line-height: 35px;
+	color: #424D61;
+  font-family: $PSRegular;
+}
+.cookies-popup {
+	background: #fff;
+	padding: 50px 130px;
+  box-shadow: 3px 4px 8px rgba(0,0,0,0.5);
+  border: 1px solid #ddd;
+  @include mq(xl){
+    padding: 50px;
+  }
+  @include mq(lg){
+    padding: 25px;
+  }
+  @include mq(md){
+    padding: 25px;
+  }
+  @include mq(sm){
+    padding: 25px;
+  }
+  @include mq(xs){
+    padding: 25px;
+  }
+}
+.cookies-text {
+	float: left;
+	overflow: hidden;
+  @include mq(xxl){
+    margin-bottom: 15px;
+  }
+  @include mq(xl){
+    margin-bottom: 15px;
+  }
+  @include mq(lg){
+    margin-bottom: 15px;
+  }
+  @include mq(md){
+    margin-bottom: 15px;
+  }
+  @include mq(sm){
+    margin-bottom: 15px;
+  }
+  @include mq(xs){
+    margin-bottom: 15px;
+  }
+}
+.cookies-text p br{
+  @include mq(xl){
+    display: none;
+  }
+  @include mq(lg){
+    display: none;
+  }
+  @include mq(md){
+    display: none;
+  }
+  @include mq(sm){
+    display: none;
+  }
+  @include mq(xs){
+    display: none;
+  }
+}
+.cookies-btn{
+	overflow: hidden;
+	padding-left: 65px;
+}
+.cookies-btn button {
+	padding: 0 42px;
+	height: 50px;
+  font-size: 18px;
+  color: #fff;
+  font-family: $PSRegular;
+  margin-right: 20px;
+  border-radius: 5px;
+  @include mq(xs){
+    margin-bottom: 10px;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.cookies-btn button.btn-reject {
+	background: #BABABA;
+	color: #fff;
+  @include transition(.3s);
+  &:hover{
+    background: $theme-color;
+  }
+}
+
+// language 
+.head-language{
+  transform: translateY(5px);
+  position: relative;
+  z-index: 999;
+  & .dropdown-toggle{
+    border: 0;
+    color: #6A7280;
+    position: relative;
+    width: 145px;
+    background: transparent;
+    & span{
+      & img{
+        margin-top: -8px;
+        margin-right: 5px;
+      }
+      & i{
+        margin-top: -5px;
+        margin-right: 5px;
+      }
+    }
+    &::after {
+      display: none;
+    } 
+    &::before{
+      position: absolute;
+      content: "\f107";
+      font-family: 'Font Awesome 5 Pro';
+      right: 35px;
+      top: 0;
+      font-size: 20px;
+      color: #6A7280;
+    }
+    &:hover{
+      background: transparent !important;
+    }
+    &:focus{
+      background: transparent !important;
+    }
+  }
+  & .bootstrap-select.btn-group.fit-width .btn .caret{
+    display: none;
+  }
+}
+.head-language .open > .dropdown-toggle.btn-default:hover {
+  color: #6A7280;
+  background-color: transparent;
+  border-color: transparent;
+}
+.head-language .open > .dropdown-toggle.btn-default:focus {
+  color: #000;
+  background-color: transparent !important;
+  border: 0;
+}
+.head-language .bootstrap-select .btn:focus {
+	outline: none !important;
+}
+.head-language .btn-group.open .dropdown-toggle {
+	box-shadow: none !important;
+}
+.head-language .dropdown-menu > li > a {
+	outline: none !important;
+}
+.head-language .bootstrap-select.btn-group.fit-width .btn .filter-option {
+	font-size: 16px;
+}
+.head-language .bootstrap-select.btn-group .dropdown-menu.inner {
+	background-color: #1F2B46;
+}
+.head-language .bootstrap-select.btn-group .dropdown-menu li > a {
+	color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #263455;
+}
+.head-language .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+	color: #fff !important;
+	background-color: #1F2B46;
+}
+.head-language .bootstrap-select.btn-group .dropdown-menu li > a img {
+	margin-right: 10px;
+  margin-top: -7px;
+}
+.head-language .bootstrap-select.btn-group .dropdown-menu li > a i {
+	margin-right: 10px;
+  margin-top: -8px;
+}
+.head-language .dropdown-menu.open{
+  padding: 0;
+  min-height: 300px;
+}
+.head-language .btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default {
+	color: #6A7280;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+// support-box-css
+.support-box-wrapper {
+  position: fixed;
+  display: none;
+  z-index: 9999;
+ 
+  right: 147px;
+  top: 79px;
+  & .support-box-inner {
+    background-color: #fff;
+    padding: 16px 16px;
+    border-radius: 100px;
+    width: 385px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+.support-box-thumb {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+.support-box-text p {
+	font-size: 17px;
+	line-height: 23px;
+	color: #424D61;
+	font-family: $PSRegular;
+}
+
+// support-icon
+.support-box-icon-wrapper {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+}
+.supporbox-icon {
+	height: 80px;
+	width: 80px;
+	background: #696CE8;
+	text-align: center;
+	line-height: 80px;
+	border-radius: 50%;
+  box-shadow: 0px 14px 31px rgba(105, 108, 232, 0.25);
+}
+.support-close-btn {
+  &  button {
+    position: absolute;
+    right: 12px;
+    top: -9px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 15px;
+    padding: 0;
+    border-radius: 50%;
+    background: #BBBABA;
+    border: 0;
+    color: #fff;
+  }
+}
+.supporbox-icon {
+  cursor: pointer;
+}
+.support-wrapper {
+  transition: all .3s;
+}
+.support-btn a:focus {
+  outline: none;
+}

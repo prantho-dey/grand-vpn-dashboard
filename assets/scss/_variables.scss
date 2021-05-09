@@ -1,0 +1,111 @@
+$body-fonts: 'product_sans_regular';
+$header-fonts: 'airbnb_cereal_app_regular';
+$icon-font: "Font Awesome 5 Pro";
+$icon-font-2: "Font Awesome 5 Duotone";
+
+$PSRegular: 'product_sans_regular';
+$PSItalic: 'product_sans_italic';
+$PSBold: 'product_sans_bold';
+$PSBoldItalic: 'product_sans_bold_italic';
+$AirbnbLight: 'airbnb_cereal_app_light';
+$AirbnbRegular: 'airbnb_cereal_app_regular';
+$AirbnbMedium: 'airbnb_cereal_app_medium';
+$AirbnbBold: 'airbnb_cereal_app_bold';
+$AirbnbBlack: 'airbnb_cereal_app_black';
+$AirbnbExtraBold: 'airbnb_cereal_app_extra_bold';
+
+$body-fz: 18px;
+$head-fw: 400;
+
+$light: #f5f5f5;
+$dark: #101a23;
+$gray: #ddd;
+$gray2: #ECF2F9;
+$heading-color: #07132C;
+$body-color: #424D61;
+$theme-color: #696CE8;
+$theme-color-2: #0478F9;
+$theme-color-3: #00CFC8;
+$hr-color: #352323;
+$dark1: #1F2B46;
+
+
+@font-face {
+  font-family: 'product_sans_bold_italic';
+  src: url('../fonts/product_sans/product_sans_bold_italic-webfont.woff2') format('woff2'),
+  url('../fonts/product_sans/product_sans_bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'product_sans_bold';
+  src: url('../fonts/product_sans/product_sans_bold-webfont.woff2') format('woff2'),
+  url('../fonts/product_sans/product_sans_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'product_sans_italic';
+  src: url('../fonts/product_sans/product_sans_italic-webfont.woff2') format('woff2'),
+  url('../fonts/product_sans/product_sans_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'product_sans_regular';
+  src: url('../fonts/product_sans/product_sans_regular-webfont.woff2') format('woff2'),
+  url('../fonts/product_sans/product_sans_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_regular';
+  src: url('../fonts/airbnbcereal/airbnbcerealbook-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcerealbook-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_extra_bold';
+  src: url('../fonts/airbnbcereal/airbnbcerealextrabold-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcerealextrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_light';
+  src: url('../fonts/airbnbcereal/airbnbcereallight-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcereallight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_medium';
+  src: url('../fonts/airbnbcereal/airbnbcerealmedium-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcerealmedium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_black';
+  src: url('../fonts/airbnbcereal/airbnbcerealblack-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcerealblack-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'airbnb_cereal_app_bold';
+  src: url('../fonts/airbnbcereal/airbnbcerealbold-webfont.woff2') format('woff2'),
+  url('../fonts/airbnbcereal/airbnbcerealbold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

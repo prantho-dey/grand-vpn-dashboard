@@ -1,0 +1,265 @@
+@use "common" as *;
+
+.btn-theme {
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "product_sans_regular";
+	display: inline-block;
+	text-align: center;
+	padding: 0 30px;
+	border-radius: 5px;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	vertical-align: middle;
+	-webkit-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-o-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+	background-color: #696CE8;
+    &:hover{
+        color: #fff;
+        background: #fff;
+        border-color: #696CE8;
+    }
+}
+.report-wrapper{
+    padding: 20px 25px;
+    background-color: #F6F9FC;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+	@include mq(xs){
+		display: inherit !important;
+	}
+    & .report-content{
+		padding-right: 20px;
+		@include mq(xs){
+			margin-bottom: 20px;
+		}
+        & p{
+            font-size: 18px;
+            line-height: 26px;
+            font-family: $AirbnbRegular;
+            color: #07132C;
+        }
+    }
+}
+
+// billing 
+.billing-tab .nav-tabs {
+    border-bottom: 1px solid #E6E7EA;
+}
+.billing-tab .nav-tabs .nav-link {
+	margin-bottom: 0px;
+	border: none;
+	padding: 10px 0px;
+	font-size: 22px;
+	line-height: 28.68px;
+	margin-right: 40px;
+	color: #07132C;
+	font-family: $AirbnbRegular;
+}
+.billing-tab .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+	color: $theme-color;
+	font-weight: 500;
+}
+.billing-wrapper{
+	padding: 40px 30px 50px 30px;
+	background-color: #F6F9FC;
+	border-radius: 10px;
+	& h6{
+		font-size: 18px;
+		line-height: 30px;
+		font-family: $PSRegular;
+		color: #9CA1AB;
+		margin-bottom: 55px;
+	}
+}
+.subscription-main{
+	background-color: #F6F9FC;
+	padding: 20px 40px 0px 40px;
+	border-radius: 10px;
+	@include mq(xs){
+		padding: 20px 20px 30px 20px;
+	}
+}
+.subscription-content{
+	& span {
+		font-size: 16px;
+		line-height: 30px;
+		color: #6A7280;
+		font-family: $PSRegular;
+		@include mq(xs){
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+	}
+	& h4{
+		font-size: 22px;
+		line-height: 30px;
+		color: #07132C;
+		font-family: $AirbnbRegular;
+	}
+}
+.subscription-icon {
+    margin-top: -60px;
+	@include mq(xs){
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+}
+.section-title{
+	& .title2{
+		font-size: 20px;
+		line-height: 30px;
+		color: #07132C;
+		font-family: $AirbnbRegular;
+	}
+}
+.section-title{
+	& .title3{
+		font-size: 22px;
+		color: #07132C;
+		font-family: $AirbnbRegular;
+	}
+}
+.work-wrapper{
+	padding: 40px 30px 10px 30px;
+	min-height: 295px;
+	background-color: #F6F9FC;
+	border-radius: 10px;
+	@include mq(xs){
+		margin-bottom: 30px;
+	}
+	@include mq(lg){
+		margin-bottom: 30px;
+	}
+	@include mq(md){
+		margin-bottom: 30px;
+	}
+	& .work-icon{
+		margin-bottom: 30px;
+	}
+	& .work-content{
+		& h4{
+			font-size: 18px;
+			line-height: 30px;
+			font-family: $AirbnbRegular;
+		}
+	}
+	& .work-content2{
+		& h4{
+			line-height: 26px;
+		}
+	}
+}
+.work-bottom{
+	& span{
+		font-size: 16px;
+		line-height: 30px;
+		font-family: $PSRegular;
+		color: #9CA1AB;
+	}
+}
+
+// smart 
+.smart-wrapper{
+	& p{
+		font-size: 18px;
+		line-height: 30px;
+		color:#424D61;
+		font-family: $PSRegular;
+	}
+}
+.smart-details{
+	background-color: #F6F9FC;
+	padding: 12px 25px 10px 25px;
+	border-radius: 10px;
+	& h3{
+		font-size: 18px;
+		line-height: 30px;
+		color: #07132C;
+		font-family: $PSBold;
+		margin-bottom: 0;
+		& a{
+			color: #0478F9;
+			border-bottom: 1px solid #0478F9;
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+}
+
+// apps 
+.desktop-area{
+	background-color: #F6F9FC;
+	padding: 23px 30px 20px 30px;
+	border-radius: 10px;
+	@include mq(xs){
+		padding: 25px;
+	}
+}
+.apps-wrapper{
+	& .apps-icon{
+		margin-right: 20px;
+	}
+	& .apps-content{
+		& h6{
+			font-family: 18px;
+			color: #07132C;
+			line-height: 23.44px;
+			font-family: $AirbnbRegular;
+			margin-bottom: 0px;
+		}
+		& span{
+			font-size: 14px;
+			font-family: $PSRegular;
+			color: #6A7280;
+		}
+	}
+}
+
+.apps-right{
+	@include mq(xs){
+		justify-content: start !important;
+		margin-top: 15px;
+	}
+}
+.apps-right-icon{
+	& i{
+		font-size: 18px;
+		color: #6A7280;
+	}
+}
+.successful-wrapper{
+	& .successful-thumb{
+		margin-bottom: 60px;
+	}
+	& .successful-content{
+		& p{
+			font-size: 18px;
+			line-height: 28.8px;
+			color: #424D61;
+		}
+	}
+}
+.success-title{
+	font-size: 36px;
+	line-height: 46.87px;
+	color: #07132C;
+}
+
+.success-area{
+	height: 930px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	@include mq(xs){
+		height: 730px;
+	}
+}

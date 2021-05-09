@@ -1,0 +1,11 @@
+@use "common" as *;
+
+.section-title {
+  .title {
+    font-family: $AirbnbMedium;
+    font-size: 26px;
+    line-height: 34px;
+    color: #07132C;
+    margin-bottom: 25px;
+  }
+}
